@@ -21,9 +21,7 @@ namespace UserLogin
                 Console.WriteLine(LoginValidation.currentUserRole);
                 
             }
-
             Console.ReadLine();
-
         }
     }
 }
