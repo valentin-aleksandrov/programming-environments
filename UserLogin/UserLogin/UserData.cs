@@ -8,7 +8,7 @@ namespace UserLogin
 {
     static class UserData
     {
-        public static User _testUser;
+        private static User _testUser;
 
         static public User TestUser
         {
@@ -17,11 +17,14 @@ namespace UserLogin
                 ResetTestUserData();
                 return _testUser;
             }
-            set {  }
+            set
+            {
+                _testUser = value;
+            }
         }
         static private void ResetTestUserData()
         {
-            _testUser = new User("Honda", "123", "112233", 1);
+            TestUser = new User("Honda", "123", "112233", 1);
         }
 
     }
