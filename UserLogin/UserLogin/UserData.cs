@@ -8,23 +8,26 @@ namespace UserLogin
 {
     static class UserData
     {
-        private static User _testUser;
+        private static User[] _testUsers;
 
-        static public User TestUser
+        static public User[] TestUsers
         {
             get
             {
                 ResetTestUserData();
-                return _testUser;
+                return _testUsers;
             }
             set
             {
-                _testUser = value;
+                _testUsers = value;
             }
         }
         static private void ResetTestUserData()
         {
-            TestUser = new User("Honda", "123", "112233", 1);
+            TestUsers = new User[3];
+            TestUsers[0] = new User("Pesho", "123234", "12131313", 0);
+            TestUsers[1] = new User("Goshko", "000234", "12131314", 0);
+            TestUsers[2] = new User("Toshko", "1111234", "12131315", 0);
         }
 
     }
