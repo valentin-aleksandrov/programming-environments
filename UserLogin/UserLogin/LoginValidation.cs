@@ -8,7 +8,18 @@ namespace UserLogin
 {
     class LoginValidation
     {
-        static private UserRoles role;
+        static private UserRoles currentUserRole;
+        static public UserRoles CurrentUserRole
+        {
+            get
+            {
+                return currentUserRole;
+            }
+            private set
+            {
+                currentUserRole = value;
+            }
+        }
         private String errorMessage;
         private String userName;
         private String password;
@@ -21,19 +32,10 @@ namespace UserLogin
         {
             user.Username = this.userName;
             user.Password = this.password;
+            currentUserRole = (UserRoles)user.Role;
             return true;
         }
-        static public UserRoles currentUserRole
-        {
-            get
-            {
-                return role;
-            }
-            private set
-            {
-                role = value;
-            }
-        }
+        
     }
    
 }

@@ -10,21 +10,22 @@ namespace UserLogin
     {
         static void Main(string[] args)
         {
-            User user = UserData.TestUser;
+            User admin = UserData.TestUser;
+
             Console.WriteLine("Please enter username:");
             String userName = Console.ReadLine();
             Console.WriteLine("Please enter password:");
             String password = Console.ReadLine();
-            LoginValidation validation = new LoginValidation();
 
-          
+            LoginValidation validation = new LoginValidation(userName,password);
+
+            User user = new User();
             if (validation.ValidateUserInput(user))
             {
                 Console.WriteLine(user.Username);
                 Console.WriteLine(user.Role);
                 Console.WriteLine(user.FakNum);
-                Console.WriteLine(LoginValidation.currentUserRole);
-                
+                Console.WriteLine(LoginValidation.CurrentUserRole);  
             }
             Console.ReadLine();
         }
