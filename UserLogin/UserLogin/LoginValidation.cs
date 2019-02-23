@@ -9,9 +9,15 @@ namespace UserLogin
     class LoginValidation
     {
         static private UserRoles role;
-        static private String userName;
-        static private String password;
-        static private String errorMessage;
+        private String errorMessage;
+        private String userName;
+        private String password;
+        public LoginValidation(String errorMessage, String userName, String password)
+        {
+            this.errorMessage = errorMessage;
+            this.userName = userName;
+            this.password = password;
+        }
         public bool ValidateUserInput()
         {
             return true;
