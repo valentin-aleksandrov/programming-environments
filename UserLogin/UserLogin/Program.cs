@@ -11,8 +11,13 @@ namespace UserLogin
         static void Main(string[] args)
         {
             User user = UserData.TestUser;
+            Console.WriteLine("Please enter username:");
+            String userName = Console.ReadLine();
+            Console.WriteLine("Please enter password:");
+            String password = Console.ReadLine();
             LoginValidation validation = new LoginValidation();
 
+          
             if (validation.ValidateUserInput(user))
             {
                 Console.WriteLine(user.Username);
