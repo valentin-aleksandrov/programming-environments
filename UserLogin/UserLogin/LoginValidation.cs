@@ -46,9 +46,18 @@ namespace UserLogin
                 this.errorMessage = "Missing password.";
                 return false;
             }
+            if(this.userName.Length < 5)
+            {
+                this.errorMessage = "Username length too short.";
+                return false;
+            }
+            if(this.password.Length < 5)
+            {
+                this.errorMessage = "Password length too short.";
+                return false;
+            }
             return true;
         }
-        
     }
    
 }
