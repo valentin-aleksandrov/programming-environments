@@ -29,11 +29,11 @@ namespace UserLogin
         }
         static public User IsUserPassCorrect(String username, String password)
         {
-            for(int i = 0; i < TestUsers.Length; i++)
+            foreach (User currentUser in TestUsers)
             {
-                if(TestUsers[i].Username == username && TestUsers[i].Password == password)
+                if(currentUser.Username == username && currentUser.Password == password)
                 {
-                    return TestUsers[i];
+                    return currentUser;
                 }
             }
             return null;
