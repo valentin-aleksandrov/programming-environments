@@ -8,6 +8,11 @@ namespace UserLogin
 {
     class Program
     {
+        //public delegate void ActionOnError(String errorMsg);
+        public static void displayError(String error)
+        {
+            Console.WriteLine("!!! " + error + " !!!");
+        }
         static void Main(string[] args)
         {
            // User admin = UserData.TestUsers;
@@ -17,7 +22,8 @@ namespace UserLogin
             Console.WriteLine("Please enter password:");
             String password = Console.ReadLine();
 
-            LoginValidation validation = new LoginValidation(userName,password);
+            LoginValidation.ActionOnError actionOnError = new LoginValidation.ActionOnError(displayError);
+            LoginValidation validation = new LoginValidation(userName,password,actionOnError);
 
             User user = new User();
             if (validation.ValidateUserInput(user))

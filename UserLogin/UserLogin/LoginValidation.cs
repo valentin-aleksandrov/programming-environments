@@ -25,7 +25,7 @@ namespace UserLogin
         private String errorMessage;
         private String userName;
         private String password;
-        public LoginValidation(String userName, String password, ActionError actionOnError)
+        public LoginValidation(String userName, String password, ActionOnError actionOnError)
         {
             this.userName = userName;
             this.password = password;
