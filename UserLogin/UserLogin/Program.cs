@@ -13,7 +13,7 @@ namespace UserLogin
             User user = UserData.TestUser;
             LoginValidation validation = new LoginValidation();
 
-            if (validation.ValidateUserInput())
+            if (validation.ValidateUserInput(user))
             {
                 Console.WriteLine(user.Username);
                 Console.WriteLine(user.Role);

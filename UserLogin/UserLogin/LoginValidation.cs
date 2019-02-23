@@ -12,14 +12,15 @@ namespace UserLogin
         private String errorMessage;
         private String userName;
         private String password;
-        public LoginValidation(String errorMessage, String userName, String password)
+        public LoginValidation(String userName, String password)
         {
-            this.errorMessage = errorMessage;
             this.userName = userName;
             this.password = password;
         }
-        public bool ValidateUserInput()
+        public bool ValidateUserInput(User user)
         {
+            user.Username = this.userName;
+            user.Password = this.password;
             return true;
         }
         static public UserRoles currentUserRole
