@@ -33,8 +33,6 @@ namespace UserLogin
             Boolean emptyUserName;
             emptyUserName = this.userName.Equals(String.Empty);
             Boolean emptyPassword = this.password.Equals(String.Empty);
-            user.Username = this.userName;
-            user.Password = this.password;
             currentUserRole = (UserRoles)user.Role;
             if (emptyUserName)
             {
@@ -56,6 +54,11 @@ namespace UserLogin
                 this.errorMessage = "Password length too short.";
                 return false;
             }
+            User findUser = UserData.IsUserPassCorrect(this.userName, this.password);
+            user.Username = findUser.Username;
+            user.Password = findUser.Password;
+            user.FakNum = findUser.FakNum;
+            user.Role = findUser.Role;
             return true;
         }
     }

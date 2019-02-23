@@ -10,7 +10,7 @@ namespace UserLogin
     {
         static void Main(string[] args)
         {
-            User admin = UserData.TestUser;
+            User admin = UserData.TestUsers;
 
             Console.WriteLine("Please enter username:");
             String userName = Console.ReadLine();
