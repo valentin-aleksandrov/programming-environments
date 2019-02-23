@@ -20,5 +20,6 @@ namespace UserLogin
             this.FakNum = fakNum;
             this.Role = role;
         } 
+        public User() { }
     }  
 }
