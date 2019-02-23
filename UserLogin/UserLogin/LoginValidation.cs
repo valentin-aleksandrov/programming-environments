@@ -9,6 +9,9 @@ namespace UserLogin
     class LoginValidation
     {
         static private UserRoles role;
+        static private String userName;
+        static private String password;
+        static private String errorMessage;
         public bool ValidateUserInput()
         {
             return true;

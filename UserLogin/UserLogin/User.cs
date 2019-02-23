@@ -19,7 +19,6 @@ namespace UserLogin
             this.Password = password;
             this.FakNum = fakNum;
             this.Role = role;
-        }
-    }
-    
+        } 
+    }  
 }
