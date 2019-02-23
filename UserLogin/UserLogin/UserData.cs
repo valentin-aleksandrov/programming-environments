@@ -25,9 +25,21 @@ namespace UserLogin
         static private void ResetTestUserData()
         {
             TestUsers = new User[3];
-            TestUsers[0] = new User("Pesho", "123234", "12131313", 0);
-            TestUsers[1] = new User("Goshko", "000234", "12131314", 0);
-            TestUsers[2] = new User("Toshko", "1111234", "12131315", 0);
+            TestUsers[0] = new User("Pesho", "123234", "12131313", 1);
+            TestUsers[1] = new User("Goshko", "000234", "12131314", 4);
+            TestUsers[2] = new User("Toshko", "1111234", "12131315", 4);
+            //TestUsers = new User[] { new User("Pesho", "123234", "12131313", 0), new User("Pesho2", "123234", "12131313", 0) };
+        }
+        static public User IsUserPassCorrect(String username, String password)
+        {
+            for(int i = 0; i < TestUsers.Length; i++)
+            {
+                if(TestUsers[i].Username == username && TestUsers[i].Password == password)
+                {
+                    return TestUsers[i];
+                }
+            }
+            return null;
         }
 
     }
