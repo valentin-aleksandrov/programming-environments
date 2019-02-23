@@ -30,9 +30,22 @@ namespace UserLogin
         }
         public bool ValidateUserInput(User user)
         {
+            Boolean emptyUserName;
+            emptyUserName = this.userName.Equals(String.Empty);
+            Boolean emptyPassword = this.password.Equals(String.Empty);
             user.Username = this.userName;
             user.Password = this.password;
             currentUserRole = (UserRoles)user.Role;
+            if (emptyUserName)
+            {
+                this.errorMessage = "Missing username.";
+                return false;
+            }
+            if (emptyPassword)
+            {
+                this.errorMessage = "Missing password.";
+                return false;
+            }
             return true;
         }
         

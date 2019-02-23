@@ -25,7 +25,7 @@ namespace UserLogin
                 Console.WriteLine(user.Username);
                 Console.WriteLine(user.Role);
                 Console.WriteLine(user.FakNum);
-                Console.WriteLine(LoginValidation.CurrentUserRole);  
+                Console.WriteLine(LoginValidation.CurrentUserRole);
             }
             Console.ReadLine();
         }
