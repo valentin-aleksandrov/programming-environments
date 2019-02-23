@@ -25,6 +25,24 @@ namespace UserLogin
                 Console.WriteLine(user.Username);
                 Console.WriteLine(user.Role);
                 Console.WriteLine(user.FakNum);
+                switch (user.Role)
+                {
+                    case 0:
+                      Console.WriteLine("Welcome, ANNONYMOUS!");
+                            break;
+                    case 1:
+                      Console.WriteLine("Welcome, ADMIN!");
+                            break;
+                    case 2:
+                        Console.WriteLine("Welcome, INSPECTOR!");
+                            break;
+                    case 3:
+                        Console.WriteLine("Welcome, PROFESSOR!");
+                            break;
+                    case 4:
+                      Console.WriteLine("Welcome, STUDENT!");
+                            break;
+                }
                 
             }
             else
