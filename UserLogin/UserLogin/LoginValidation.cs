@@ -37,24 +37,34 @@ namespace UserLogin
             if (emptyUserName)
             {
                 this.errorMessage = "Missing username.";
+                user.Role = 0;
                 return false;
             }
             if (emptyPassword)
             {
                 this.errorMessage = "Missing password.";
+                user.Role = 0;
                 return false;
             }
             if(this.userName.Length < 5)
             {
                 this.errorMessage = "Username length too short.";
+                user.Role = 0;
                 return false;
             }
             if(this.password.Length < 5)
             {
                 this.errorMessage = "Password length too short.";
+                user.Role = 0;
                 return false;
             }
             User findUser = UserData.IsUserPassCorrect(this.userName, this.password);
+            if(findUser == null)
+            {
+                this.errorMessage = "User not found.";
+                user.Role = 0;
+                return false;
+            }
             user.Username = findUser.Username;
             user.Password = findUser.Password;
             user.FakNum = findUser.FakNum;
