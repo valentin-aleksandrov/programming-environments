@@ -8,26 +8,23 @@ namespace UserLogin
 {
     static class UserData
     {
-        private static User[] _testUsers;
+        private static User[] testUsers;
 
         static public User[] TestUsers
         {
             get
             {
                 ResetTestUserData();
-                return _testUsers;
+                return testUsers;
             }
-            set
-            {
-                _testUsers = value;
-            }
+            private set { }
         }
         static private void ResetTestUserData()
         {
-            TestUsers = new User[3];
-            TestUsers[0] = new User("Pesho", "123234", "12131313", 1);
-            TestUsers[1] = new User("Goshko", "000234", "12131314", 4);
-            TestUsers[2] = new User("Toshko", "1111234", "12131315", 4);
+            testUsers = new User[3];
+            testUsers[0] = new User("Pesho", "123234", "12131313", 1);
+            testUsers[1] = new User("Goshko", "000234", "12131314", 4);
+            testUsers[2] = new User("Toshko", "1111234", "12131315", 4);
             //TestUsers = new User[] { new User("Pesho", "123234", "12131313", 0), new User("Pesho2", "123234", "12131313", 0) };
         }
         static public User IsUserPassCorrect(String username, String password)

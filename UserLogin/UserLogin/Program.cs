@@ -10,7 +10,7 @@ namespace UserLogin
     {
         static void Main(string[] args)
         {
-            User admin = UserData.TestUsers;
+           // User admin = UserData.TestUsers;
 
             Console.WriteLine("Please enter username:");
             String userName = Console.ReadLine();
@@ -25,6 +25,11 @@ namespace UserLogin
                 Console.WriteLine(user.Username);
                 Console.WriteLine(user.Role);
                 Console.WriteLine(user.FakNum);
+                
+            }
+            else
+            {
+                Console.WriteLine("Validation fails.");
                 Console.WriteLine(LoginValidation.CurrentUserRole);
             }
             Console.ReadLine();
