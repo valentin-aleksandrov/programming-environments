@@ -44,6 +44,17 @@ namespace UserLogin
             }
             return null;
         }
+        public static void SetUserActiveTo(String username, DateTime newDate)
+        {
+            for(int i = 0; i < TestUsers.Length; i++)
+            {
+                if(TestUsers[i].Username == username)
+                {
+                    TestUsers[i].ExpiryDate = newDate;
+                    break;
+                }
+            }
+        }
 
     }
 }
