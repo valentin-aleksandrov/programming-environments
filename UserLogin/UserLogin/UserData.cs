@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,10 @@ namespace UserLogin
             testUsers[1] = new User("Goshko", "000234", "12131314", 4);
             testUsers[2] = new User("Toshko", "1111234", "12131315", 4);
             //TestUsers = new User[] { new User("Pesho", "123234", "12131313", 0), new User("Pesho2", "123234", "12131313", 0) };
+            for(int i = 0; i < TestUsers.Length; i++)
+            {
+                TestUsers[i].Created = DateTime.Now;
+            }
         }
         static public User IsUserPassCorrect(String username, String password)
         {
