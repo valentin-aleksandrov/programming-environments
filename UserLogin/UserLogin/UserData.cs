@@ -72,6 +72,15 @@ namespace UserLogin
             }
             Logger.LogActivity("Промяна на роля на " + username);
         }
+        public static Dictionary<String, int> allUsersUsernames()
+        {
+            Dictionary<String, int> result = new Dictionary<string, int>();
+            for(int i = 0; i < testUsers.Count; i++)
+            {
+                result.Add(testUsers[i].Username, i);
+            }
 
+            return result;
+        }
     }
 }

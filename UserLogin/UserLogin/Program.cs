@@ -41,10 +41,11 @@ namespace UserLogin
                         String adminOption = "-1";
                         while(adminOption != "0")
                         {
-                            Console.WriteLine("Изберете опция:");
-                            Console.WriteLine("0: Изход");
-                            Console.WriteLine("1: Промяна на роля на потребител");
-                            Console.WriteLine("2: Промяна на активност на протебителя");
+                            Console.WriteLine("Choose option:");
+                            Console.WriteLine("0: Exit");
+                            Console.WriteLine("1: Change user role.");
+                            Console.WriteLine("2: Change user activity.");
+                            Console.WriteLine("3: User list.");
                             adminOption = Console.ReadLine();
                             switch (adminOption)
                             {
@@ -53,6 +54,13 @@ namespace UserLogin
                                     break;
                                 case "2":
                                     changeUserActivity();
+                                    break;
+                                case "3":
+                                    Dictionary<String, int> allUsers = UserData.allUsersUsernames();
+                                    foreach (var currentUser in allUsers)
+                                    {
+                                        Console.WriteLine(currentUser.Key);
+                                    }
                                     break;
                             }
                         }
