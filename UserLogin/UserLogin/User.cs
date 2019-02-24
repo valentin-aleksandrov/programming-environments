@@ -12,6 +12,8 @@ namespace UserLogin
         public String Password { get; set; }
         public String FakNum { get; set; }
         public Int32 Role { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime ExpiryDate { get; set; }
 
         public User(String username, String password, String fakNum, Int32 role)
         {

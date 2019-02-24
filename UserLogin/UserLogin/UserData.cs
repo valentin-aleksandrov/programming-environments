@@ -30,6 +30,7 @@ namespace UserLogin
             for(int i = 0; i < TestUsers.Length; i++)
             {
                 TestUsers[i].Created = DateTime.Now;
+                TestUsers[i].ExpiryDate = DateTime.MaxValue;
             }
         }
         static public User IsUserPassCorrect(String username, String password)

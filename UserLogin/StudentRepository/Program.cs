@@ -22,7 +22,7 @@ namespace StudentRepository
 
             //Date after 12 hours
             Console.WriteLine("DateTime after 12 hours" + DateTime.Now.AddHours(12));
-
+            Console.WriteLine(DateTime.MaxValue);
 
             Console.ReadLine();
         }
