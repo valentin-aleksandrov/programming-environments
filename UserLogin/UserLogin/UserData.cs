@@ -9,9 +9,9 @@ namespace UserLogin
 {
     static class UserData
     {
-        private static User[] testUsers;
+        private static List<User> testUsers;
 
-        static public User[] TestUsers
+        static public List<User> TestUsers
         {
             get
             {
@@ -22,15 +22,19 @@ namespace UserLogin
         }
         static private void ResetTestUserData()
         {
-            testUsers = new User[3];
+            /*testUsers = new User[3];
             testUsers[0] = new User("Pesho", "123234", "12131313", 1);
             testUsers[1] = new User("Goshko", "000234", "12131314", 4);
-            testUsers[2] = new User("Toshko", "1111234", "12131315", 4);
+            testUsers[2] = new User("Toshko", "1111234", "12131315", 4);*/
             //TestUsers = new User[] { new User("Pesho", "123234", "12131313", 0), new User("Pesho2", "123234", "12131313", 0) };
-            for(int i = 0; i < TestUsers.Length; i++)
+            testUsers = new List<User>();
+            testUsers.Add(new User("Pesho", "123234", "12131313", 1));
+            testUsers.Add(new User("Goshko", "000234", "12131314", 4));
+            testUsers.Add(new User("Toshko", "1111234", "12131315", 4));
+            for(int i = 0; i < testUsers.Count; i++)
             {
-                TestUsers[i].Created = DateTime.Now;
-                TestUsers[i].ExpiryDate = DateTime.MaxValue;
+                testUsers[i].Created = DateTime.Now;
+                testUsers[i].ExpiryDate = DateTime.MaxValue;
             }
         }
         static public User IsUserPassCorrect(String username, String password)
@@ -46,14 +50,27 @@ namespace UserLogin
         }
         public static void SetUserActiveTo(String username, DateTime newDate)
         {
-            for(int i = 0; i < TestUsers.Length; i++)
+            for(int i = 0; i < TestUsers.Count; i++)
             {
-                if(TestUsers[i].Username == username)
+                if(testUsers[i].Username == username)
                 {
-                    TestUsers[i].ExpiryDate = newDate;
+                    testUsers[i].ExpiryDate = newDate;
                     break;
                 }
             }
+            Logger.LogActivity("Промяна на активност на " + username);
+        }
+        public static void AssignUserRole(String username, UserRoles newRole)
+        {
+            for (int i = 0; i < TestUsers.Count; i++)
+            {
+                if (testUsers[i].Username == username)
+                {
+                    testUsers[i].Role = (int)newRole;
+                    break;
+                }
+            }
+            Logger.LogActivity("Промяна на роля на " + username);
         }
 
     }

@@ -38,6 +38,24 @@ namespace UserLogin
                             break;
                     case 1:
                       Console.WriteLine("Welcome, ADMIN!");
+                        String adminOption = "-1";
+                        while(adminOption != "0")
+                        {
+                            Console.WriteLine("Изберете опция:");
+                            Console.WriteLine("0: Изход");
+                            Console.WriteLine("1: Промяна на роля на потребител");
+                            Console.WriteLine("2: Промяна на активност на протебителя");
+                            adminOption = Console.ReadLine();
+                            switch (adminOption)
+                            {
+                                case "1":
+                                    changeUserRole();
+                                    break;
+                                case "2":
+                                    changeUserActivity();
+                                    break;
+                            }
+                        }
                             break;
                     case 2:
                         Console.WriteLine("Welcome, INSPECTOR!");
@@ -57,6 +75,31 @@ namespace UserLogin
                 Console.WriteLine(LoginValidation.CurrentUserRole);
             }
             Console.ReadLine();
+        }
+
+        public static void changeUserActivity()
+        {
+            Console.WriteLine("Please enter an Username");
+            String uName = Console.ReadLine();
+            Console.WriteLine("Please Enter date");
+            int date = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please Enter month");
+            int month = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please Enter year");
+            int year = int.Parse(Console.ReadLine());
+            DateTime inputDate = new DateTime(year, month, date);
+            UserData.SetUserActiveTo(uName, inputDate);
+
+        }
+
+        public static void changeUserRole()
+        {
+            Console.WriteLine("Please enter an Username");
+            String uName = Console.ReadLine();
+            Console.WriteLine("Please enter new Role");
+            int uRole = int.Parse(Console.ReadLine());
+            UserRoles currentRole = (UserRoles)uRole;
+            UserData.AssignUserRole(uName, currentRole);
         }
     }
 }

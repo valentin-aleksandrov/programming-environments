@@ -8,7 +8,7 @@ namespace UserLogin
 {
     class User
     {
-        public String Username { get; set; }
+        public String Username;
         public String Password { get; set; }
         public String FakNum { get; set; }
         public Int32 Role { get; set; }
