@@ -8,6 +8,6 @@ namespace StudentRepository
 {
     class StudentData
     {
-        Student TestStudent { get; set }
+        public Student TestStudent { get; private set; }
     }
 }
