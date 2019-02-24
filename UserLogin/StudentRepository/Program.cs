@@ -22,7 +22,14 @@ namespace StudentRepository
 
             //Date after 12 hours
             Console.WriteLine("DateTime after 12 hours" + DateTime.Now.AddHours(12));
-            Console.WriteLine(DateTime.MaxValue);
+            Console.WriteLine("Enter Year: ");
+            int year = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Month: ");
+            int month = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Date: ");
+            int inputDate = int.Parse(Console.ReadLine());
+            DateTime newDate = new DateTime(year, month, inputDate);
+            Console.WriteLine(newDate);
 
             Console.ReadLine();
         }
