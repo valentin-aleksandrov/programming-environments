@@ -14,6 +14,11 @@ namespace StudentRepository
             Console.WriteLine(date);
             Console.WriteLine("Year --> " + date.Year);
             Console.WriteLine("Date --> " + date.Day);
+            Console.WriteLine("Hour --> " + date.Hour);
+            Console.WriteLine("Today --> " + DateTime.Today);
+            Console.WriteLine("Now --> " + DateTime.Now);
+            Console.WriteLine("Now --> " + DateTime.Now);
+            Console.WriteLine("Current Hour --> " + DateTime.Now.Hour);
 
 
 
