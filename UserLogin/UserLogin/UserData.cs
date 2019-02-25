@@ -48,29 +48,16 @@ namespace UserLogin
             }
             return null;
         }
-        public static void SetUserActiveTo(String username, DateTime newDate)
+        public static void SetUserActiveTo(int index, DateTime newDate)
         {
-            for(int i = 0; i < TestUsers.Count; i++)
-            {
-                if(testUsers[i].Username == username)
-                {
-                    testUsers[i].ExpiryDate = newDate;
-                    break;
-                }
-            }
-            Logger.LogActivity("Промяна на активност на " + username);
+          
+            testUsers[index].ExpiryDate = newDate;
+            Logger.LogActivity("Change activity " + testUsers[index].Username);
         }
-        public static void AssignUserRole(String username, UserRoles newRole)
+        public static void AssignUserRole(int index, UserRoles newRole)
         {
-            for (int i = 0; i < TestUsers.Count; i++)
-            {
-                if (testUsers[i].Username == username)
-                {
-                    testUsers[i].Role = (int)newRole;
-                    break;
-                }
-            }
-            Logger.LogActivity("Промяна на роля на " + username);
+            testUsers[index].Role = (int)newRole;
+            Logger.LogActivity("Change role on " + testUsers[index].Username);
         }
         public static Dictionary<String, int> allUsersUsernames()
         {

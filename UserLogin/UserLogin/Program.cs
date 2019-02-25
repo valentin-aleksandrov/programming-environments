@@ -60,6 +60,7 @@ namespace UserLogin
                                     foreach (var currentUser in allUsers)
                                     {
                                         Console.WriteLine(currentUser.Key);
+                                        Console.WriteLine(UserData.TestUsers[currentUser.Value]);
                                     }
                                     break;
                             }
@@ -96,7 +97,8 @@ namespace UserLogin
             Console.WriteLine("Please Enter year");
             int year = int.Parse(Console.ReadLine());
             DateTime inputDate = new DateTime(year, month, date);
-            UserData.SetUserActiveTo(uName, inputDate);
+            Dictionary<String, int> allUsers = UserData.allUsersUsernames();
+            UserData.SetUserActiveTo(allUsers[uName], inputDate);
 
         }
 
@@ -107,7 +109,8 @@ namespace UserLogin
             Console.WriteLine("Please enter new Role");
             int uRole = int.Parse(Console.ReadLine());
             UserRoles currentRole = (UserRoles)uRole;
-            UserData.AssignUserRole(uName, currentRole);
+            Dictionary<String, int> allUsers = UserData.allUsersUsernames();
+            UserData.AssignUserRole(allUsers[uName], currentRole);
         }
     }
 }

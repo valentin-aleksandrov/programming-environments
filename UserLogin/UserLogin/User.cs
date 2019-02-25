@@ -23,5 +23,9 @@ namespace UserLogin
             this.Role = role;
         } 
         public User() { }
+        public override string ToString()
+        {
+            return this.Username+" "+this.Role;
+        }
     }  
 }
