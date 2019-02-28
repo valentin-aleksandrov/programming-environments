@@ -67,14 +67,7 @@ namespace UserLogin
                                     }
                                     break;
                                 case "4":
-                                    StreamReader reader = new StreamReader(@"C:\Users\Lenny\Documents\Lenny\projects\Програмни среди\programming-environments\UserLogin\UserLogin\test.txt");
-                                    String currentLine = reader.ReadLine();
-                                    while (currentLine != null)
-                                    {
-                                        Console.WriteLine(currentLine);
-                                        currentLine = reader.ReadLine();
-                                    }
-                                    reader.Close();
+                                    loadActivityLogs();
                                     break;
                                 case "5":
                                     String currentLogData = Logger.getCurrentSessionActivities();
@@ -127,6 +120,20 @@ namespace UserLogin
             UserRoles currentRole = (UserRoles)uRole;
             Dictionary<String, int> allUsers = UserData.allUsersUsernames();
             UserData.AssignUserRole(allUsers[uName], currentRole);
+        }
+        public static void loadActivityLogs()
+        {
+            StreamReader reader = new StreamReader(@"C:\Users\Lenny\Documents\Lenny\projects\Програмни среди\programming-environments\UserLogin\UserLogin\test.txt");
+            String currentLine = reader.ReadLine();
+            StringBuilder logBuilder = new StringBuilder();
+            while (currentLine != null)
+            {
+                logBuilder.Append(currentLine);
+                logBuilder.Append(Environment.NewLine);
+                currentLine = reader.ReadLine();
+            }
+            Console.WriteLine(logBuilder.ToString());
+            reader.Close();
         }
     }
 }
