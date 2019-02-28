@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace UserLogin
 {
@@ -14,7 +15,8 @@ namespace UserLogin
             String activityLine = DateTime.Now /*LoginValidation.currentUserName*/
                 + ";" + LoginValidation.CurrentUserRole + ";"
                 + activity;
-            currentSessionActivities.Add(activityLine);
+            currentSessionActivities.Add(activityLine);      
+            File.AppendAllText(@"C:\Users\Lenny\Documents\Lenny\projects\Програмни среди\programming-environments\UserLogin\UserLogin\test.txt", activityLine + Environment.NewLine);
         }
     }
 }

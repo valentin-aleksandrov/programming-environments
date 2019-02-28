@@ -75,8 +75,7 @@ namespace UserLogin
                     case 4:
                       Console.WriteLine("Welcome, STUDENT!");
                             break;
-                }
-                
+                }  
             }
             else
             {
