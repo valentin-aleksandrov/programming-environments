@@ -48,6 +48,7 @@ namespace UserLogin
                             Console.WriteLine("2: Change user activity.");
                             Console.WriteLine("3: User list.");
                             Console.WriteLine("4: Display activity log.");
+                            Console.WriteLine("5: Display current activity logs.");
                             adminOption = Console.ReadLine();
                             switch (adminOption)
                             {
@@ -74,6 +75,10 @@ namespace UserLogin
                                         currentLine = reader.ReadLine();
                                     }
                                     reader.Close();
+                                    break;
+                                case "5":
+                                    String currentLogData = Logger.getCurrentSessionActivities();
+                                    Console.WriteLine(currentLogData);
                                     break;
                             }
                         }
