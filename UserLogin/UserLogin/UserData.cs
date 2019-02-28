@@ -39,14 +39,11 @@ namespace UserLogin
         }
         static public User IsUserPassCorrect(String username, String password)
         {
-            foreach (User currentUser in TestUsers)
-            {
-                if(currentUser.Username == username && currentUser.Password == password)
-                {
-                    return currentUser;
-                }
-            }
-            return null;
+
+            User user = (from findUser in TestUsers
+                         where findUser.Username == username && findUser.Password == password
+                         select findUser).First();
+            return user;
         }
         public static void SetUserActiveTo(int index, DateTime newDate)
         {
