@@ -77,7 +77,7 @@ namespace UserLogin
             user.Password = findUser.Password;
             user.FakNum = findUser.FakNum;
             user.Role = findUser.Role;
-            Logger.LogActivity("Succesful Login");
+            Logger.LogActivity("Successful Login");
             return true;
         }
     }

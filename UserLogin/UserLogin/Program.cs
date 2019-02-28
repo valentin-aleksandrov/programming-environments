@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace UserLogin
 {
@@ -46,6 +47,7 @@ namespace UserLogin
                             Console.WriteLine("1: Change user role.");
                             Console.WriteLine("2: Change user activity.");
                             Console.WriteLine("3: User list.");
+                            Console.WriteLine("4: Display activity log.");
                             adminOption = Console.ReadLine();
                             switch (adminOption)
                             {
@@ -62,6 +64,16 @@ namespace UserLogin
                                         Console.WriteLine(currentUser.Key);
                                         Console.WriteLine(UserData.TestUsers[currentUser.Value]);
                                     }
+                                    break;
+                                case "4":
+                                    StreamReader reader = new StreamReader(@"C:\Users\Lenny\Documents\Lenny\projects\Програмни среди\programming-environments\UserLogin\UserLogin\test.txt");
+                                    String currentLine = reader.ReadLine();
+                                    while (currentLine != null)
+                                    {
+                                        Console.WriteLine(currentLine);
+                                        currentLine = reader.ReadLine();
+                                    }
+                                    reader.Close();
                                     break;
                             }
                         }
