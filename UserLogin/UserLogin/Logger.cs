@@ -18,12 +18,13 @@ namespace UserLogin
             currentSessionActivities.Add(activityLine);      
             File.AppendAllText(@"C:\Users\Lenny\Documents\Lenny\projects\Програмни среди\programming-environments\UserLogin\UserLogin\test.txt", activityLine + Environment.NewLine);
         }
-        public static String getCurrentSessionActivities()
+        public static String getCurrentSessionActivities(String filter)
         {
+            List<String> filteredActivities = (from activity in currentSessionActivities where activity.Contains(filter) select activity).ToList();
             StringBuilder loggerBuilder = new StringBuilder();
-            for(int i = 0; i < currentSessionActivities.Count; i++)
+            foreach(var currentLog in filteredActivities)
             {
-                loggerBuilder.Append(currentSessionActivities[i]);
+                loggerBuilder.Append(currentLog);
                 loggerBuilder.Append(Environment.NewLine);
             }
             return loggerBuilder.ToString();

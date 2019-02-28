@@ -70,7 +70,9 @@ namespace UserLogin
                                     loadActivityLogs();
                                     break;
                                 case "5":
-                                    String currentLogData = Logger.getCurrentSessionActivities();
+                                    Console.WriteLine("Enter filter for log");
+                                    String filter = Console.ReadLine();
+                                    String currentLogData = Logger.getCurrentSessionActivities(filter);
                                     Console.WriteLine(currentLogData);
                                     break;
                             }
