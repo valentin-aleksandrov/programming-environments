@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace UserLogin
 {
     class LoginValidation
+
     {
         public delegate void ActionOnError(String errorMsg);
         static private UserRoles currentUserRole;
@@ -36,7 +37,7 @@ namespace UserLogin
             Boolean emptyUserName;
             emptyUserName = this.userName.Equals(String.Empty);
             Boolean emptyPassword = this.password.Equals(String.Empty);
-            currentUserRole = (UserRoles)user.Role;
+            currentUserRole = (UserRoles)user.Role; 
             if (emptyUserName)
             {
                 this.errorMessage = "Missing username.";
