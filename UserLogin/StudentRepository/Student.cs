@@ -18,9 +18,33 @@ namespace StudentRepository
         public String FacNumber { get; set; }
         public int Course { get; set; }
         public String Flow { get; set; }
-        public String Group { get; set; }
+        public int Group { get; set; }
+        public DateTime FinishedSemesterDate { get; set;}
+        public DateTime SemesterPaymentDate { get; set;}
 
-        public Student(string firstName, string middleName, string lastName, string faculty, string speciality, string degree, Status status, string facNumber, int course, string flow, string group)
+        public Student(string firstName, string middleName,
+            string lastName, string faculty,
+            string speciality, string degree,
+            Status status, string facNumber, 
+            int course, string flow, int group)
+        {
+            FirstName = firstName;
+            MiddleName = middleName;
+            LastName = lastName;
+            Faculty = faculty;
+            Speciality = speciality;
+            Degree = degree;
+            this.status = status;
+            FacNumber = facNumber;
+            Course = course;
+            Flow = flow;
+            Group = group;
+        }
+        public Student(string firstName, string middleName,
+            string lastName, string faculty, string speciality,
+            string degree, Status status, string facNumber, int course, 
+            string flow, int group, DateTime FinishedSemesterDate
+            , DateTime SemesterPaymentDate)
         {
             FirstName = firstName;
             MiddleName = middleName;

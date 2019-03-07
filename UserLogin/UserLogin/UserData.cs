@@ -39,7 +39,6 @@ namespace UserLogin
         }
         static public User IsUserPassCorrect(String username, String password)
         {
-
             User user = (from findUser in TestUsers
                          where findUser.Username == username && findUser.Password == password
                          select findUser).First();
