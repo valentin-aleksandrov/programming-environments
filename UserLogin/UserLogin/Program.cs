@@ -14,14 +14,8 @@ namespace UserLogin
         {
             Console.WriteLine("!!! " + error + " !!!");
         }
-        public static void displayError2(String error)
-        {
-            Console.WriteLine("!!! " + error + " !!!");
-        }
         static void Main(string[] args)
         {
-           // User admin = UserData.TestUsers[;
-
             Console.WriteLine("Please enter username:");
             String userName = Console.ReadLine();
             Console.WriteLine("Please enter password:");
@@ -29,7 +23,7 @@ namespace UserLogin
 
             //LoginValidation.ActionOnError actionOnError = new LoginValidation.ActionOnError(displayError);
 
-            LoginValidation validation = new LoginValidation(userName,password, displayError2);
+            LoginValidation validation = new LoginValidation(userName,password, displayError);
 
             User user = new User();
             if (validation.ValidateUserInput(user))
