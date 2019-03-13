@@ -1,0 +1,6 @@
+﻿First name Pesho Last name Petrov Fac. Number 12345678
+Math FINNISHED_SEMESTER
+English FINNISHED_SEMESTER
+Sport FINNISHED_SEMESTER
+Programming FINNISHED_SEMESTER
+

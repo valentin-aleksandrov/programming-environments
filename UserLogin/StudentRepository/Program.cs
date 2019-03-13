@@ -9,7 +9,14 @@ namespace StudentRepository
     class Program
     {
         static void Main(string[] args) {
-            DateTime date = new DateTime(2017, 9, 15, 10, 30, 0);
+            Console.WriteLine("Enter faculty number");
+            String inputFacNumber = Console.ReadLine();
+
+            StudentData.CreateReferences(@"C:\Users\Lenny\Documents\Lenny\projects\Програмни среди\programming-environments\UserLogin\StudentRepository\referenceLog.txt", inputFacNumber);
+
+
+
+          /*  DateTime date = new DateTime(2017, 9, 15, 10, 30, 0);
             Console.WriteLine(date);
             Console.WriteLine("Year --> " + date.Year);
             Console.WriteLine("Date --> " + date.Day);
@@ -29,7 +36,7 @@ namespace StudentRepository
             int inputDate = int.Parse(Console.ReadLine());
             DateTime newDate = new DateTime(year, month, inputDate);
             Console.WriteLine(newDate);
-
+            */
             Console.ReadLine();
         }
     }
