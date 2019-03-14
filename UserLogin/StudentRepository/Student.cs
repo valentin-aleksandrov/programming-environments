@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentRepository
 {
-    class Student
+    public class Student
     {
         public String FirstName { get; set; }
         public String MiddleName { get; set; }
@@ -22,7 +22,7 @@ namespace StudentRepository
         public DateTime FinishedSemesterDate { get; set;}
         public DateTime SemesterPaymentDate { get; set;}
 
-        public Student(string firstName, string middleName,
+       public Student(string firstName, string middleName,
             string lastName, string faculty,
             string speciality, string degree,
             Status status, string facNumber, 

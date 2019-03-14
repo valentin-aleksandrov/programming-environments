@@ -7,7 +7,7 @@ using System.IO;
 
 namespace StudentRepository
 {
-    static class StudentData
+    public static class StudentData
     {
         private static List<Student> testStudents;
         public static List<Student> TestStudents
@@ -25,7 +25,7 @@ namespace StudentRepository
         public static List<Refernece> referneces { get; set; }
 
 
-       static StudentData()
+       static  StudentData()
         {
             testStudents = new List<Student>();
 
