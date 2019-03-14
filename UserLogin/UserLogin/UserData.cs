@@ -37,7 +37,7 @@ namespace UserLogin
                 testUsers[i].ExpiryDate = DateTime.MaxValue;
             }
         }
-        static public User IsUserPassCorrect(String username, String password)
+        public static User IsUserPassCorrect(String username, String password)
         {
             User user = (from findUser in TestUsers
                          where findUser.Username == username && findUser.Password == password

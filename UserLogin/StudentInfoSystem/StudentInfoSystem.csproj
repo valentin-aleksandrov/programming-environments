@@ -53,6 +53,7 @@
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -92,6 +93,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudentRepository\StudentRepository.csproj">
+      <Project>{c0f7a2e2-a682-40b0-9832-510b86c6e2d2}</Project>
+      <Name>StudentRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserLogin\UserLogin.csproj">
+      <Project>{acfabe73-4c71-49ee-9c73-cdbbdf56de88}</Project>
+      <Name>UserLogin</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
