@@ -21,8 +21,11 @@
         </GroupBox>
         <Label x:Name="lblName" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="47,67,0,0" Height="34" Width="106" FontFamily="Arial Black" FontSize="24"/>
         <Button Content="Hi!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="547,67,0,0" Click="Button_Click_1"/>
-        <Label Content="Factorial:" HorizontalAlignment="Left" Margin="22,141,0,0" VerticalAlignment="Top" Height="45" Width="146" FontSize="24" FontFamily="Arial Black"/>
-        <TextBox x:Name="factorialInput" HorizontalAlignment="Left" Height="26" Margin="182,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
-        <Button Content="Calculate factorial" HorizontalAlignment="Left" Margin="313,150,0,0" VerticalAlignment="Top" Width="155" Click="Button_Click" Height="26"/>
+        <Label Content="Number:" HorizontalAlignment="Left" Margin="30,131,0,0" VerticalAlignment="Top" Height="45" Width="146" FontSize="24" FontFamily="Arial Black"/>
+        <TextBox x:Name="factorialInput" HorizontalAlignment="Left" Height="26" Margin="155,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+        <Button Content="Calculate factorial" HorizontalAlignment="Left" Margin="348,140,0,0" VerticalAlignment="Top" Width="155" Click="Button_Click" Height="26"/>
+        <Label Content="^" HorizontalAlignment="Left" Margin="255,131,0,0" VerticalAlignment="Top" Height="45" Width="30" FontSize="24" FontFamily="Arial Black"/>
+        <TextBox x:Name="powerInput" HorizontalAlignment="Left" Height="26" Margin="285,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
+        <Button Content="Calculate power" HorizontalAlignment="Left" Margin="524,140,0,0" VerticalAlignment="Top" Width="159" Click="Button_Click_2" Height="26"/>
     </Grid>
 </Window>
