@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Label Content="Hello, WPF!" HorizontalAlignment="Left" Margin="170,146,0,0" VerticalAlignment="Top" Height="105" Width="464" FontSize="72" FontFamily="Showcard Gothic"/>
+        <Button Content="Hi" HorizontalAlignment="Left" Margin="262,286,0,0" VerticalAlignment="Top" Width="228" Height="77" FontSize="36" FontFamily="Showcard Gothic" Click="Button_Click"/>
 
     </Grid>
 </Window>
