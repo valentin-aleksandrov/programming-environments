@@ -7,10 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <GroupBox x:Name="gbUser" Header="User" HorizontalAlignment="Left" Height="221" Margin="128,52,0,0" VerticalAlignment="Top" Width="506" FontSize="24" FontFamily="Arial Black">
-            <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="35" Margin="167,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" FontFamily="Arial"/>
+        <GroupBox x:Name="gbUser" Header="User" HorizontalAlignment="Left" Height="92" Margin="34,33,0,0" VerticalAlignment="Top" Width="479" FontSize="24" FontFamily="Arial Black">
+            <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="173,1,0,19.6" TextWrapping="Wrap" Width="271" FontFamily="Arial" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="1.239"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-0.378"/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
         </GroupBox>
-        <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="161,186,0,0" Height="34" Width="106" FontFamily="Arial Black" FontSize="24"/>
-        <Button Content="Hi!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="544,311,0,0" Click="Button_Click_1"/>
+        <Label x:Name="lblName" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="47,67,0,0" Height="34" Width="106" FontFamily="Arial Black" FontSize="24"/>
+        <Button Content="Hi!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="547,67,0,0" Click="Button_Click_1"/>
+        <Label Content="Factorial:" HorizontalAlignment="Left" Margin="22,141,0,0" VerticalAlignment="Top" Height="45" Width="146" FontSize="24" FontFamily="Arial Black"/>
+        <TextBox x:Name="factorialInput" HorizontalAlignment="Left" Height="26" Margin="182,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+        <Button Content="Calculate factorial" HorizontalAlignment="Left" Margin="313,150,0,0" VerticalAlignment="Top" Width="155" Click="Button_Click" Height="26"/>
     </Grid>
 </Window>

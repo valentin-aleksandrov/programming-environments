@@ -37,5 +37,22 @@ namespace WPFhello
                     + "this is your first program on VS 2017");
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            String factorial = factorialInput.Text;
+            long factorialValue = long.Parse(factorial);
+            long factorialResult = calculateFactorial(factorialValue);
+            MessageBox.Show("Factorial of " + factorial + " is == " + factorialResult);
+        }
+        long calculateFactorial(long number)
+        {
+            long result = 1;
+            for(int i = 1; i <= number; i++)
+            {
+                result *= i;
+            }
+            return result;
+        }
     }
 }
