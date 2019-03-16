@@ -27,8 +27,15 @@ namespace WPFhello
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello, "+txtName.Text+"!!!"+Environment.NewLine
-                +"this is your first program on VS 2017");
+            String userInput = txtName.Text;
+            if(userInput.Length < 2)
+            {
+                MessageBox.Show("Your name must be at least two chararcters long.");
+            } else
+            {
+                MessageBox.Show("Hello, " + txtName.Text + "!!!" + Environment.NewLine
+                    + "this is your first program on VS 2017");
+            }
         }
     }
 }
