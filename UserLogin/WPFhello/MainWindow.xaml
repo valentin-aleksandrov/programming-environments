@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Hello, WPF!" HorizontalAlignment="Left" Margin="170,146,0,0" VerticalAlignment="Top" Height="105" Width="464" FontSize="72" FontFamily="Showcard Gothic"/>
-        <Button Content="Hi" HorizontalAlignment="Left" Margin="262,286,0,0" VerticalAlignment="Top" Width="228" Height="77" FontSize="36" FontFamily="Showcard Gothic" Click="Button_Click"/>
-
+        <GroupBox x:Name="gbUser" Header="User" HorizontalAlignment="Left" Height="221" Margin="128,52,0,0" VerticalAlignment="Top" Width="506" FontSize="24" FontFamily="Arial Black">
+            <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="35" Margin="167,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" FontFamily="Arial"/>
+        </GroupBox>
+        <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="161,186,0,0" Height="34" Width="106" FontFamily="Arial Black" FontSize="24"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="544,311,0,0" Click="Button_Click_1"/>
     </Grid>
 </Window>

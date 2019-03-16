@@ -25,9 +25,9 @@ namespace WPFhello
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hi!!! This you first program on VS 2017.");
+            MessageBox.Show("Hello!");
         }
     }
 }
