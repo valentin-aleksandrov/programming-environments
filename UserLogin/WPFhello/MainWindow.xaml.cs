@@ -64,5 +64,18 @@ namespace WPFhello
             double result = Math.Pow(baseValue, powerValue);
             MessageBox.Show(baseValue+"^"+powerValue+" == "+result);
         }
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            //do my stuff before closing
+            MessageBoxResult result = MessageBox.Show("Do you want to exit", "Exit", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            } else
+            {
+                e.Cancel = false;
+            }
+            base.OnClosing(e);
+        }
     }
 }

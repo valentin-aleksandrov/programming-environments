@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <GroupBox x:Name="gbUser" Header="User" HorizontalAlignment="Left" Height="92" Margin="34,33,0,0" VerticalAlignment="Top" Width="479" FontSize="24" FontFamily="Arial Black">
             <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="173,1,0,19.6" TextWrapping="Wrap" Width="271" FontFamily="Arial" RenderTransformOrigin="0.5,0.5">
                 <TextBox.RenderTransform>
