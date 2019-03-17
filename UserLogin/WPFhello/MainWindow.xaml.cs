@@ -93,5 +93,12 @@ namespace WPFhello
             MessageBox.Show(messageBuilder.ToString());
 
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello, Windows Presenation Foudation!");
+
+            TextBlock1.Text = DateTime.Now.ToString();
+        }
     }
 }

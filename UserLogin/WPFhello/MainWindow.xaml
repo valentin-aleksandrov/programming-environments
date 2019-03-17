@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFhello"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="mainGrid">
+    <Grid x:Name="mainGrid" Margin="10,0,3.6,-1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -39,5 +39,6 @@
         <TextBox HorizontalAlignment="Left" Height="42" Margin="198,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="24"/>
         <TextBlock x:Name="TextBlock1" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap" Text="Hello, XAML!" VerticalAlignment="Top" Height="83" Width="160" Margin="612,218,0,0"/>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial black">I edit XAML myself!</TextBlock>
+        <Button HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="23" Margin="133,0,197,10" Click="Button_Click_4">Click me</Button>
     </Grid>
 </Window>
