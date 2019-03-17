@@ -77,5 +77,21 @@ namespace WPFhello
             }
             base.OnClosing(e);
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            StringBuilder messageBuilder = new StringBuilder();
+            foreach (var item in mainGrid.Children)
+            {
+                if (item is TextBox)
+                {
+                    messageBuilder.Append(((TextBox)item).Text)
+                        .Append(Environment.NewLine);
+                }
+            }
+            messageBuilder.Append("welcome!");
+            MessageBox.Show(messageBuilder.ToString());
+
+        }
     }
 }

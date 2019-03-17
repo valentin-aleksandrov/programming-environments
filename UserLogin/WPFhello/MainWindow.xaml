@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFhello"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -30,5 +30,10 @@
         <Label Content="^" HorizontalAlignment="Left" Margin="255,131,0,0" VerticalAlignment="Top" Height="45" Width="30" FontSize="24" FontFamily="Arial Black"/>
         <TextBox x:Name="powerInput" HorizontalAlignment="Left" Height="26" Margin="285,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
         <Button Content="Calculate power" HorizontalAlignment="Left" Margin="524,140,0,0" VerticalAlignment="Top" Width="159" Click="Button_Click_2" Height="26"/>
+        <Label Content="NameOne" HorizontalAlignment="Left" Margin="66,214,0,0" VerticalAlignment="Top" Height="43" Width="175" FontSize="24"/>
+        <Label Content="NameTwo" HorizontalAlignment="Left" Margin="66,257,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.411,-2.363" Width="175" FontSize="24"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="200,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="24"/>
+        <TextBox HorizontalAlignment="Left" Height="38" Margin="200,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="24"/>
+        <Button Content="Welcome all!" HorizontalAlignment="Left" Margin="380,218,0,0" VerticalAlignment="Top" Width="198" Height="81" FontSize="24" Click="Button_Click_3"/>
     </Grid>
 </Window>
