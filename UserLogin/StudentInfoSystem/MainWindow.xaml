@@ -7,8 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1000">
     <Grid>
-        <GroupBox Header="Personal data" HorizontalAlignment="Left" Height="170" Margin="150,69,0,0" VerticalAlignment="Top" Width="637"/>
-        <GroupBox Header="Student Information" HorizontalAlignment="Left" Height="318" Margin="150,296,0,0" VerticalAlignment="Top" Width="637"/>
+        <GroupBox Header="Personal data" HorizontalAlignment="Left" Height="170" Margin="124,68,0,0" VerticalAlignment="Top" Width="637" FontSize="16" FontFamily="Arial"/>
+        <GroupBox Header="Student Information" HorizontalAlignment="Left" Height="318" Margin="125,279,0,0" VerticalAlignment="Top" Width="636" FontSize="18" FontFamily="Arial"/>
+        <Label Content="First Name:" HorizontalAlignment="Left" Margin="150,97,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Middle Name:" HorizontalAlignment="Left" Margin="151,139,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Last Name:" HorizontalAlignment="Left" Margin="151,184,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="285,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Arial" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="285,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Arial" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="285,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontFamily="Arial" FontSize="16"/>
+        <Label Content="Faculty:" HorizontalAlignment="Left" Margin="140,336,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Width="75"/>
+        <Label Content="Speciallity:" HorizontalAlignment="Left" Margin="140,389,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Width="99"/>
+        <Label Content="Degree:" HorizontalAlignment="Left" Margin="140,438,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Width="75"/>
+        <Label Content="Status:" HorizontalAlignment="Left" Margin="140,483,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.099,0.313" FontFamily="Arial" FontSize="18" Width="67"/>
+        <Label Content="Fak. Number:" HorizontalAlignment="Left" Margin="140,525,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Width="122"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="277,343,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontFamily="Arial" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="277,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontFamily="Arial" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="277,440,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontFamily="Arial" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="277,487,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontFamily="Arial" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="277,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontFamily="Arial" FontSize="18"/>
+        <Label Content="Course:" HorizontalAlignment="Left" Margin="486,336,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Width="76"/>
+        <Label Content="Flow:" HorizontalAlignment="Left" Margin="486,386,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Width="54"/>
+        <Label Content="Group:" HorizontalAlignment="Left" Margin="486,435,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18" Width="67"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="594,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" TextChanged="TextBox_TextChanged_1" FontFamily="Arial" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="594,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontFamily="Arial" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="594,440,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontFamily="Arial" FontSize="18"/>
 
     </Grid>
 </Window>
