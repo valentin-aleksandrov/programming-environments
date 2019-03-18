@@ -33,8 +33,8 @@
         <TextBox x:Name="groupBox" HorizontalAlignment="Left" Height="23" Margin="703,442,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontFamily="Arial" FontSize="18"/>
         <Button Content="Clear all" HorizontalAlignment="Left" Margin="150,619,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button Content="Display Data" HorizontalAlignment="Left" Margin="250,619,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Button Content="Deactivate All" HorizontalAlignment="Left" Margin="353,619,0,0" VerticalAlignment="Top" Width="93"/>
-        <Button Content="Activate" HorizontalAlignment="Left" Margin="478,619,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Deactivate All" HorizontalAlignment="Left" Margin="353,619,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_2"/>
+        <Button Content="Activate All" HorizontalAlignment="Left" Margin="478,619,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
 
     </Grid>
 </Window>

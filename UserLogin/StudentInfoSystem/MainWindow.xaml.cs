@@ -65,5 +65,27 @@ namespace StudentInfoSystem
             flowBox.Text = student.Flow.ToString();
             groupBox.Text = student.Group.ToString();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            foreach (var currentChild in mainGrid.Children)
+            {
+                if (currentChild is TextBox)
+                {
+                    ((TextBox)currentChild).IsEnabled = false;
+                }
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            foreach (var currentChild in mainGrid.Children)
+            {
+                if (currentChild is TextBox)
+                {
+                    ((TextBox)currentChild).IsEnabled = true;
+                }
+            }
+        }
     }
 }
