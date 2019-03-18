@@ -49,5 +49,21 @@ namespace StudentInfoSystem
                 }
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Student student = StudentData.TestStudents[0];
+            fNameBox.Text = student.FirstName;
+            mNameBox.Text = student.MiddleName;
+            lNameBox.Text = student.LastName;
+            fakNumberBox.Text = student.FacNumber;
+            facBox.Text = student.Faculty;
+            specBox.Text = student.Speciality;
+            degreeBox.Text = student.Degree;
+            statusBox.Text = student.status.ToString();
+            courseBox.Text = student.Course.ToString();
+            flowBox.Text = student.Flow.ToString();
+            groupBox.Text = student.Group.ToString();
+        }
     }
 }
