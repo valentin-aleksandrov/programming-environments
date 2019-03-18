@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1000">
     <Grid>
-        
+        <GroupBox Header="Personal data" HorizontalAlignment="Left" Height="170" Margin="150,69,0,0" VerticalAlignment="Top" Width="637"/>
+        <GroupBox Header="Student Information" HorizontalAlignment="Left" Height="318" Margin="150,296,0,0" VerticalAlignment="Top" Width="637"/>
+
     </Grid>
 </Window>
