@@ -14,13 +14,50 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <Label Grid.Row="1" Grid.Column="1" Content="Elly" />
-                <Label Grid.Row="2" Grid.Column="1" Content="Honda" />
+                <Label Grid.Row="0" Grid.Column="0"  Content="First Name:" FontSize="17" FontFamily="Arial"/>
+                <Label Grid.Row="1" Grid.Column="0"  Content="Midle Name:" FontSize="17" FontFamily="Arial"/>
+                <Label Grid.Row="2" Grid.Column="0"  Content="Last Name:" FontSize="17" FontFamily="Arial"/>
+                <TextBox Grid.Row="0" Grid.Column="1" x:Name="firstNameText" HorizontalAlignment="Left" Height="28" Width="312" FontSize="17" FontFamily="Arial"/>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="middleNameText" HorizontalAlignment="Left" Height="28" Width="312" FontSize="17" FontFamily="Arial"/>
+                <TextBox Grid.Row="2" Grid.Column="1" x:Name="lastNameText" HorizontalAlignment="Left" Height="28" Width="312" FontSize="17" FontFamily="Arial"/>
             </Grid>
-            
-
         </GroupBox>
-        
-   
+        <GroupBox Header="Student Information" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Height="250" Width="701" FontFamily="Arial" FontSize="17">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Faculty:" FontSize="17" FontFamily="Arial"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="Specialty:"  FontSize="17" FontFamily="Arial"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="Degree:"  FontSize="17" FontFamily="Arial"/>
+                <Label Grid.Row="3" Grid.Column="0" Content="Status:" FontSize="17" FontFamily="Arial"/>
+                <Label Grid.Row="4" Grid.Column="0" Content="Faculty Number:" FontSize="17" FontFamily="Ari"/>
+                <TextBox Grid.Row="0" Grid.Column="1" x:Name="facultyText" Height="28" FontSize="17" FontFamily="Arial"/>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="specialtyText" Height="28" FontSize="17" FontFamily="Arial"/>
+                <TextBox Grid.Row="2" Grid.Column="1" x:Name="degreeText" Height="28" FontSize="17" FontFamily="Arial"/>
+                <TextBox Grid.Row="3" Grid.Column="1" x:Name="statusText" Height="28" FontSize="17" FontFamily="Arial"/>
+                <TextBox Grid.Row="4" Grid.Column="1" x:Name="facultyNumberText" Height="28" FontSize="17" FontFamily="Arial"/>
+                <Label Grid.Row="0" Grid.Column="2" Content="Course:" FontSize="17" FontFamily="Arial"/>
+                <Label Grid.Row="1" Grid.Column="2" Content="Flow:" FontSize="17" FontFamily="Arial"/>
+                <Label Grid.Row="2" Grid.Column="2" Content="Group:" FontSize="17" FontFamily="Arial"/>
+                <TextBox Grid.Row="0" Grid.Column="3" x:Name="courseText" Width="80" Height="28" FontSize="17" FontFamily="Arial"/>
+                <TextBox Grid.Row="1" Grid.Column="3" x:Name="flowText" Width="80"   Height="28" FontSize="17" FontFamily="Arial"/>
+                <TextBox Grid.Row="2" Grid.Column="3" x:Name="groupText" Width="80"  Height="28" FontSize="17" FontFamily="Arial"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="Clear All" HorizontalAlignment="Left" Margin="10,419,0,0" VerticalAlignment="Top" Width="75" Height="28" FontSize="17" FontFamily="Arial" Click="Button_Click_1"/>
+        <Button Content="Display Data" HorizontalAlignment="Left" Margin="105,419,0,0" VerticalAlignment="Top" Width="107" Height="28" FontSize="17" FontFamily="Arial" Click="Button_Click_2"/>
+        <Button Content="Deactivate All" HorizontalAlignment="Left" Margin="232,419,0,0" VerticalAlignment="Top" Width="114" FontSize="17" FontFamily="Arial" Height="28" Click="Button_Click_3"/>
+        <Button Content="Activate All" HorizontalAlignment="Left" Margin="367,419,0,0" VerticalAlignment="Top" Width="94" FontSize="17" FontFamily="Arial" Height="28" Click="Button_Click_4"/>
     </Grid>
 </Window>
