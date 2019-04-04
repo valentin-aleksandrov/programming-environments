@@ -46,7 +46,4 @@
             </Grid>
         </Grid>
     </Grid>
-    <Page.Resources>
-        <sys:String x:Key="strTitle">View Expense Report</sys:String>
-    </Page.Resources>
 </Page>
