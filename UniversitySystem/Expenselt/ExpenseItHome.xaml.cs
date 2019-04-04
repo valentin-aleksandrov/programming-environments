@@ -23,6 +23,9 @@ namespace Expenselt
         public ExpenseItHome()
         {
             InitializeComponent();
+            this.peopleListBox.Items.Add("James");
+            this.peopleListBox.Items.Add("David");
+           
         }
     }
 }
