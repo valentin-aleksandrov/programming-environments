@@ -4,7 +4,7 @@
         Title="Student Information System" Height="500" Width="737">
     <Grid x:Name="mainGrid">
         <GroupBox Header="Personal Data" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="154" Width="701" FontFamily="Arial" FontSize="17">
-            <Grid>
+            <Grid x:Name="personal">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
@@ -23,7 +23,7 @@
             </Grid>
         </GroupBox>
         <GroupBox Header="Student Information" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Height="250" Width="701" FontFamily="Arial" FontSize="17">
-            <Grid>
+            <Grid x:Name="info">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>

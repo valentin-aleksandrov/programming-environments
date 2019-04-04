@@ -29,12 +29,20 @@ namespace StudentInfoSystem
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            foreach (var currentChild in mainGrid.Children) 
+            foreach (var currentChild in personal.Children) 
             {
                 if (currentChild is TextBox) 
                 {
                     ((TextBox)currentChild).Text = Environment.NewLine;
                 
+                }
+            }
+            foreach (var currentChild in info.Children)
+            {
+                if (currentChild is TextBox)
+                {
+                    ((TextBox)currentChild).Text = Environment.NewLine;
+
                 }
             }
         }
@@ -53,13 +61,19 @@ namespace StudentInfoSystem
             courseText.Text = student.Course.ToString();
             flowText.Text = student.Flow.ToString();
             groupText.Text = student.Group.ToString();
-            
-
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            foreach (var currentChild in mainGrid.Children)
+            foreach (var currentChild in personal.Children) 
+            {
+                if (currentChild is TextBox)
+                {
+                    ((TextBox)currentChild).IsEnabled = false;
+
+                }
+            }
+            foreach (var currentChild in info.Children)
             {
                 if (currentChild is TextBox)
                 {
@@ -71,7 +85,15 @@ namespace StudentInfoSystem
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            foreach (var currentChild in mainGrid.Children)
+            foreach (var currentChild in personal.Children) 
+            {
+                if (currentChild is TextBox)
+                {
+                    ((TextBox)currentChild).IsEnabled = true;
+
+                }
+            }
+            foreach (var currentChild in info.Children)
             {
                 if (currentChild is TextBox)
                 {
