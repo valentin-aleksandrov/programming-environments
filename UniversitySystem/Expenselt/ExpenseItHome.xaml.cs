@@ -34,9 +34,8 @@ namespace Expenselt
         private void Button_Click(Object sender, RoutedEventArgs e)
         {
             String greetingMessage;
-            greetingMessage = peopleListBox.SelectedItem.ToString();
-            MessageBox.Show("Hi " + greetingMessage);
-
+            greetingMessage = (peopleListBox.SelectedItem as ListBoxItem).Content.ToString();
+            MessageBox.Show("Hi, " + greetingMessage + ".");
         }
     }
 }
