@@ -29,6 +29,7 @@ namespace Expenselt
             ListBoxItem david = new ListBoxItem();
             david.Content = "David";
             this.peopleListBox.Items.Add(david);
+            peopleListBox.SelectedItem = james;
         }
     }
 }
