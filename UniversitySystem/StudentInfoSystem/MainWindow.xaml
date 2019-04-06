@@ -13,7 +13,7 @@
         <GroupBox Grid.Column="1" Header="Personal Data" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="154" Width="701" FontFamily="Arial" FontSize="17">
             <Grid x:Name="personal">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -32,9 +32,9 @@
         <GroupBox Grid.Column="1" Header="Student Information" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Height="250" Width="701" FontFamily="Arial" FontSize="17">
             <Grid x:Name="info">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="70"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -57,9 +57,9 @@
                 <Label Grid.Row="0" Grid.Column="2" Content="Course:" FontSize="17" FontFamily="Arial"/>
                 <Label Grid.Row="1" Grid.Column="2" Content="Flow:" FontSize="17" FontFamily="Arial"/>
                 <Label Grid.Row="2" Grid.Column="2" Content="Group:" FontSize="17" FontFamily="Arial"/>
-                <TextBox Grid.Row="0" Grid.Column="3" x:Name="courseText" Width="80" Height="28" FontSize="17" FontFamily="Arial"/>
-                <TextBox Grid.Row="1" Grid.Column="3" x:Name="flowText" Width="80"   Height="28" FontSize="17" FontFamily="Arial"/>
-                <TextBox Grid.Row="2" Grid.Column="3" x:Name="groupText" Width="80"  Height="28" FontSize="17" FontFamily="Arial"/>
+                <TextBox HorizontalAlignment="Left" Grid.Row="0" Grid.Column="3" x:Name="courseText" Width="80" Height="28" FontSize="17" FontFamily="Arial"/>
+                <TextBox HorizontalAlignment="Left" Grid.Row="1" Grid.Column="3" x:Name="flowText" Width="80"   Height="28" FontSize="17" FontFamily="Arial"/>
+                <TextBox HorizontalAlignment="Left" Grid.Row="2" Grid.Column="3" x:Name="groupText" Width="80"  Height="28" FontSize="17" FontFamily="Arial"/>
             </Grid>
         </GroupBox>
         <Button Grid.Column="1" Content="Clear All" HorizontalAlignment="Left" Margin="10,419,0,0" VerticalAlignment="Top" Width="75" Height="28" FontSize="17" FontFamily="Arial" Click="Button_Click_1"/>
