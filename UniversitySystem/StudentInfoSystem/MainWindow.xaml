@@ -8,7 +8,7 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <GroupBox Header="Рhoto" Grid.Column="0" Height="300" Width="300">
-            
+            <Image Source="C:\Users\Elly\Documents\Lenny\Github\programming-environments\UniversitySystem\StudentInfoSystem\no-profile-photo.jpg"></Image>
         </GroupBox>
         <GroupBox Grid.Column="1" Header="Personal Data" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="154" Width="701" FontFamily="Arial" FontSize="17">
             <Grid x:Name="personal">
